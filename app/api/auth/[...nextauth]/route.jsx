@@ -19,11 +19,6 @@ export const authOptions = {
     }),
     CredentialsProvider({
       name: "credentials",
-      credentials: {
-        email: { label: "Email", type: "text", placeholder: "email" },
-        password: { label: "Password", type: "password" },
-        username: { label: "Username", type: "text", placeholder: "username" },
-      },
       async authorize(credentials) {
         if (!credentials.email || !credentials.password) {
           throw new Error("Please enter an email and password");
